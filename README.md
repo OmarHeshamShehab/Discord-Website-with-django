@@ -1,1 +1,1 @@
-# Discord-Website-with-django
+Build a discord-like application with Python Django.
