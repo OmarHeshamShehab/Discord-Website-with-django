@@ -14,7 +14,7 @@ class Room(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)  # Name of the room
     description = models.TextField(null=True, blank=True)  # Description of the room
-    # participants =
+    participants = models.ManyToManyField(User, related_name="participants", blank=True)
     updated = models.DateTimeField(auto_now=True)  # Last updated timestamp
     created = models.DateTimeField(auto_now_add=True)  # Date for first initiation
 
