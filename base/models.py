@@ -32,5 +32,8 @@ class Message(models.Model):
     updated = models.DateTimeField(auto_now=True)  # Last updated timestamp
     created = models.DateTimeField(auto_now_add=True)  # Date for first initiation
 
+    class Meta:
+        ordering = ["-updated", "-created"]
+
     def __str__(self):
         return self.body[0:50]
